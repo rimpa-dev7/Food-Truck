@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Truck Spot – Concept 2: The Serving Window</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&family=Caveat+Brush&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs><clipPath id="pc"><path d="M60 138S10 88 10 54a50 50 0 0 1 100 0c0 34-50 84-50 84Z"/></clipPath></defs>
+<symbol id="mark" viewBox="0 0 150 140">
+ <g clip-path="url(#pc)">
+  <rect width="120" height="140" fill="#231942"/>
+  <rect x="0" y="0" width="120" height="40" fill="#fff"/>
+  <path d="M0 0h20v40H0zM40 0h20v40H40zM80 0h20v40H80z" fill="#12A594"/>
+  <g fill="#fff"><circle cx="10" cy="40" r="10"/><circle cx="50" cy="40" r="10"/><circle cx="90" cy="40" r="10"/></g>
+  <g fill="#12A594"><circle cx="30" cy="40" r="10"/><circle cx="70" cy="40" r="10"/><circle cx="110" cy="40" r="10"/></g>
+  <rect x="26" y="58" width="68" height="30" rx="5" fill="#FFE45E"/>
+  <circle cx="60" cy="73" r="8" fill="#FF5C8A"/>
+ </g>
+ <g fill="none" stroke="#FF5C8A" stroke-width="6" stroke-linecap="round"><path d="M122 30a28 28 0 0 1 0 40"/><path d="M134 18a46 46 0 0 1 0 64"/></g>
+</symbol></svg>
+
+<div class="awning" aria-hidden="true"></div>
+<div class="wrap">
+ <div class="nav">
+  <a class="brand" href="#top"><svg width="42" height="40"><use href="#mark"/></svg>Truck Spot</a>
+  <div><a class="l" href="#map-sec">Map</a><a class="l" href="#menus">Menus</a><a class="l" href="#notify">Alerts</a></div>
+ </div>
+
+ <header class="hero" id="top">
+  <div>
+   <h1>Chase the <span class="script" style="color:var(--pink)">sizzle.</span></h1>
+   <p>Every food truck near you, live on one map. See what’s on the menu before you walk over.</p>
+   <div class="btns"><a class="btn" href="#notify">App Store</a><a class="btn ghost" href="#notify">Google Play</a></div>
+  </div>
+  <svg class="big" viewBox="0 0 150 140" role="img" aria-label="Truck Spot logo: a map pin topped with a striped truck awning and a serving window"><use href="#mark"/></svg>
+ </header>
+
+ <section id="map-sec">
+  <h2>Who’s parked <span class="script">right now</span></h2>
+  <div class="tg" id="tg" role="group" aria-label="Filter trucks"></div>
+  <div class="mapbox">
+   <svg id="map" viewBox="0 0 600 440" role="img" aria-label="Map of nearby food trucks">
+    <g stroke="var(--mapline)" stroke-width="16" stroke-linecap="round"><path d="M0 100H600M0 230H600M0 340H600M120 0V440M300 0V440M480 0V440"/></g>
+    <rect x="320" y="250" width="140" height="70" rx="10" fill="#12A594" opacity=".25"/>
+    <circle cx="300" cy="230" r="9" fill="#2f7bff" stroke="#fff" stroke-width="3"/>
+    <g id="pins"></g>
+   </svg>
+   <div class="sign" id="side" aria-live="polite"></div>
+  </div>
+ </section>
+
+ <section id="menus">
+  <h2>Today’s <span class="script">specials</span></h2>
+  <div class="board">
+   <div class="tabs" id="tabs" role="tablist" aria-label="Truck menus"></div>
+   <div id="menu" role="tabpanel"></div>
+  </div>
+ </section>
+
+ <section id="notify">
+  <div class="ticket">
+   <div style="font-weight:700">ORDER #0001 · YOURS</div>
+   <h2>Get the first call.</h2>
+   <p>Trucks parking near you and launch news, straight to your inbox. No app needed yet.</p>
+   <form id="form">
+    <input id="email" type="email" required placeholder="you@example.com" aria-label="Email address" autocomplete="email">
+    <button class="btn" type="submit">Save my spot</button>
+    <button class="btn ghost" type="button" id="push">Turn on browser alerts</button>
+    <div id="msg" role="status"></div>
+   </form>
+  </div>
+ </section>
+</div>
+<footer>© 2026 Truck Spot design and development by Ahaan Software consulting </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
